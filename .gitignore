@@ -1,0 +1,35 @@
+# Dependencias
+node_modules/
+dist/
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Archivos de TypeScript
+*.tsbuildinfo
+out/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Cobertura de tests
+coverage/
+
+# Entorno
+.env
+.env.local
+
+# Archivos temporales
+*.swp
+*.swo
