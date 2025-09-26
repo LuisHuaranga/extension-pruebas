@@ -1,4 +1,3 @@
-import * as vscode from 'vscode';
 import { getActiveEditor,showInfoMessage } from '../utils/helpers';
 
 export function wordCount(): void {
@@ -14,5 +13,5 @@ export function wordCount(): void {
     const palabras = texto.split(/\s+/).filter(word => word.length > 0);
     const numeroPalabras = palabras.length;
     
-    vscode.window.showInformationMessage(`El documento tiene ${numeroPalabras} palabras.`);
+    showInfoMessage(`El documento tiene ${numeroPalabras} palabras.`);
 }
