@@ -30,6 +30,68 @@
       {
         "command": "luiso-extension.selectTheme",
         "title": "Tema de Color"
+      },
+      {
+        "command": "luiso-extension.mensajeContextual",
+        "title": "Convertir a mayusculas"
+      },
+      {
+        "command": "luiso-extension.agregarElemento",
+        "title": "➕ Agregar elemento",
+        "category": "Mi Panel"
+      },
+      {
+        "command": "luiso-extension.actualizarPanel",
+        "title": "🔄 Actualizar panel",
+        "category": "Mi Panel"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "luiso-extension.mensajeContextual",
+          "group": "navigation",
+          "when": "editorHasSelection"
+        },
+        {
+          "submenu": "luiso-extension/editorTools",
+          "group": "modification",
+          "when": "editorTextFocus"
+        }
+      ],
+      "luiso-extension/editorTools": [
+        {
+          "command": "luiso-extension.helloWorld",
+          "group": "0_actions"
+        },
+        {
+          "command": "luiso-extension.wordCount",
+          "group": "1_actions"
+        },
+        {
+          "command": "luiso-extension.insertDate",
+          "group": "1_actions"
+        }
+      ],
+      "view/title": [
+        {
+          "command": "luiso-extension.actualizarPanel",
+          "when": "view == luiso-extension.miPanel",
+          "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "luiso-extension.eliminarElemento",
+          "when": "view == luiso-extension.miPanel"
+        }
+      ]
+    },
+    "submenus": [
+      {
+        "id": "luiso-extension/editorTools",
+        "label": "🛠️ Mis Herramientas",
+        "icon": "$(tools)"
       }
     ],
     "viewsContainers": {
@@ -42,18 +104,24 @@
       ]
     },
     "views": {
+      "explorer": [
+        {
+          "id": "luiso-extension.miPanel",
+          "name": "🛠️ Mi Panel Personalizado",
+          "icon": "resources/ico.png"
+        }
+      ],
       "package-mainframe": [
-          {
-            "id": "package-dependencies-1",
-            "name": "HOLA Lesly",
-            "icon": "resources/ico.png"
-          },
-          {
-            "id": "package-dependencies-2",
-            "name": "Dependencias",
-            "icon": "resources/ico.png"
-
-          }
+        {
+          "id": "package-dependencies-1",
+          "name": "HOLA Lesly",
+          "icon": "resources/ico.png"
+        },
+        {
+          "id": "package-dependencies-2",
+          "name": "Dependencias",
+          "icon": "resources/ico.png"
+        }
       ]
     }
   },
