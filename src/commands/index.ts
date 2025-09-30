@@ -17,7 +17,7 @@ export const allCommands: Command[] = [
     { id: 'luiso-extension.wordCount', execute: wordCount },
     { id: 'luiso-extension.insertDate', execute: insertDate },
     { id: 'luiso-extension.selectTheme', execute: selectTheme },
-    { id: 'luiso-extension.mensajeContextual', execute: mensajeContextual },    
+    { id: 'luiso-extension.mensajeContextual', execute: mensajeContextual }  
 ];
 
 // Función para registrar todos los comandos

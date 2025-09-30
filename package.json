@@ -44,7 +44,12 @@
         "command": "luiso-extension.actualizarPanel",
         "title": "🔄 Actualizar panel",
         "category": "Mi Panel"
-      }
+      },
+      {
+        "command": "luiso-extension.eliminarElemento",
+        "title": "🗑 Eliminar",
+        "category": "Mi Panel"
+      }      
     ],
     "menus": {
       "editor/context": [

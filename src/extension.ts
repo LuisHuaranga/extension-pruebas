@@ -67,28 +67,28 @@ export function activate(context: vscode.ExtensionContext) {
         miProveedor = new MiProveedor();
     
     // Registrar la vista
-    const treeView = vscode.window.createTreeView('mi-extension.miPanel', {
+    const treeView = vscode.window.createTreeView('luiso-extension.miPanel', {
         treeDataProvider: miProveedor
     });
 
     // Comando para agregar elementos
-    let agregarElemento = vscode.commands.registerCommand('mi-extension.agregarElemento', () => {
+    let agregarElemento = vscode.commands.registerCommand('luiso-extension.agregarElemento', () => {
         miProveedor.agregarElemento();
         vscode.window.showInformationMessage('✅ Elemento agregado al panel');
     });
 
     // Comando para actualizar
-    let actualizarPanel = vscode.commands.registerCommand('mi-extension.actualizarPanel', () => {
+    let actualizarPanel = vscode.commands.registerCommand('luiso-extension.actualizarPanel', () => {
         vscode.window.showInformationMessage('🔄 Panel actualizado');
     });
 
     // Comando cuando se hace clic en un elemento
-    let clickElemento = vscode.commands.registerCommand('mi-extension.clickElemento', (element: MiElemento) => {
+    let clickElemento = vscode.commands.registerCommand('luiso-extension.clickElemento', (element: MiElemento) => {
         vscode.window.showInformationMessage(`🎯 Hiciste clic en: ${element.label}`);
     });
 
     // Comando para eliminar elemento
-    let eliminarElemento = vscode.commands.registerCommand('mi-extension.eliminarElemento', (element: MiElemento) => {
+    let eliminarElemento = vscode.commands.registerCommand('luiso-extension.eliminarElemento', (element: MiElemento) => {
         miProveedor.eliminarElemento(element);
         vscode.window.showInformationMessage(`🗑️ Elemento eliminado: ${element.label}`);
     });
